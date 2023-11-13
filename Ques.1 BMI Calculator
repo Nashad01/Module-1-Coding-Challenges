@@ -1,0 +1,22 @@
+Ques.1 BMI Calculator
+function calculateBMI(weight, height) {
+    // Calculate BMI using the formula: BMI = weight / (height * height)
+    const bmi = weight / (height * height);
+
+    // Determine the health classification based on BMI
+    if (bmi < 18.5) {
+        return "Underweight";
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+        return "Normal weight";
+    } else if (bmi >= 25 && bmi < 29.9) {
+        return "Overweight";
+    } else {
+        return "Obese";
+    }
+}
+
+// Example usage:
+const weight = 45; // in kilograms
+const height = 1.60; // in meters
+const classification = calculateBMI(weight, height);
+console.log(`BMI Classification: ${classification}`);
